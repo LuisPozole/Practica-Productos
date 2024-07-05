@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PKPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV70QPJkL9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="http://localhost:3000/css/estilos.css">
+</head>
+<body>
+    <h1>Catálogo de Productos</h1>
+
+    <a href="/productos/agregarProducto">Agregar Producto</a> <br><br>
+
+    <div id="contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productosCorrectos.forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.idproducto %></td>
+                        <td><%= producto.nombre %></td>
+                        <td><%= producto.descripcion %></td>
+                        <td><%= producto.precio %></td>
+                        <td>
+                            <a href="/productos/editarProducto/<%= producto.idproducto %>"><i class="fas fa-edit"></i> Editar</a> 
+                            <a href="/productos/borrarProducto/<%= producto.idproducto %>" onclick="return confirm('¿Estás seguro de que quieres borrar este producto?')"><i class="fas fa-trash-alt"></i> Borrar</a> 
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

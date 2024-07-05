@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form{
+    margin-top: 30px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 7px;
+    background-color: #f4e8c1;
+    border: 2px solid #c1a564;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input{
+    width: 80%;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    height: 30px;
+    background-color: #ffe9b0;
+    border: 2px solid #c1a564;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 1em;
+    color: #5a3e2b;
+}
+
+input:focus {
+    outline: none;
+    border-color: #805b2e;
+    background-color: #fff0d4;
+}
+
+button{
+    margin-top: 10px;
+    height: 35px;
+    background-color: #c1a564;
+    border: 0px;
+    border-radius: 5px;
+    width: 85%;
+    cursor: pointer;
+    font-size: 1em;
+    color: #5a3e2b;
+}
+
+button:hover{
+    background-color: #a48340;
+    color: white;
+}
+
+.tacheNombre, .tacheCelular, .tacheCorreo{
+    color: #b33b3b;
+}
+
+.input-tache{
+    background-color: #f2b1b1;
+    border: 2px solid #b33b3b;
+}
+
+.mensajeNombre, .mensajeCelular, .mensajeCorreo{
+    font-size: small;
+    color: #b33b3b;
+}
+
+.buenaNombre, .buenaCelular, .buenaCorreo{
+    color: #0cab54;
+}
+
+.input-buena{
+    background-color: #b3f2cf;
+    border: 2px solid #0cab54;
+}
+
+.ocultar{
+    display: none;
+}
